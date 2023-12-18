@@ -25,9 +25,11 @@ h1 {
     float: left;
     color: #adadad;
     text-align: center;
-    padding: 16px 30px;
+    /* padding: 16px 30px; */
+    padding: 16px 1%;
     text-decoration: none;
     font-size: 17px;
+    box-sizing: border-box;
 }
 
 .topnav a:hover {
