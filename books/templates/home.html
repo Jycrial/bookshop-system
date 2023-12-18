@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1 style="text-align: center;">{% block title %} 网上购书管理系统 {% endblock %}</h1>
+
+    <hr><br>
+    
+    <div class="container-wrapper">
+        {% for post in posts %}
+            <div  class="book-container">
+                <h2 class="book-title">
+                    <a href="{{ url_for('edit', id=post['id']) }}" class="bookname">
+                        {{ post['id'] }}.{{ post['name'] }}
+                    </a>
+                </h2>
+                <div class="book-author">作者: {{ post['author'] }}</p>
+                <div class="book-price">定价: <span style="color: red;">¥{{ post['price'] }}</span> </p>
+                <div class="book-isbn">ISBN: {{ post['isbn'] }}</p>
+                <div class="book-num">剩余数量: {{ post['num'] }}</p>
+                <div class="book-description">描述: {{ post['description'] }}</p>
+                <div class="edit-button">
+                    <a href="{{ url_for('edit', id=post['id']) }}" class="edit-button-content">
+                        编辑
+                    </a>
+                </div>
+            </div>
+            <br>
+        {% endfor %}
+    </div>
+
+{% endblock %}

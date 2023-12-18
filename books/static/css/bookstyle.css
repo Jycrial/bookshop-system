@@ -1,0 +1,45 @@
+.container-wrapper {
+    background-color: rgba(255, 254, 236, 0.95);
+    border-radius: 5px;
+    /* 页边距 */
+    padding: 5px 30px;
+    margin: 20px auto;
+
+    width: auto;
+    max-width: 1100px;
+
+    height: auto;
+    min-height: 200px;
+}
+
+.bookname {
+    color: #04AA6D;
+    text-decoration: none;
+}
+
+.bookname:hover {
+    color: #05c07c;
+    text-decoration: underline;
+}
+
+.edit-button {
+    background-color: rgb(255, 96, 96);
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-button:hover {
+    background-color: rgb(255, 76, 76);
+    width: 51px;
+    height: 31px;
+}
+
+.edit-button-content {
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+}

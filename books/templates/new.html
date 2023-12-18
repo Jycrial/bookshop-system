@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %} 添加图书 {% endblock %}
+{% block content %}
+<h1 style="text-align: center;">添加图书</span></h1>
+
+<hr>
+<br>
+
+<form method="post">
+    
+    <!-- 书名 -->
+    <div class="form-group">
+        <label for="name"> <span style="font-size: 20px;">书名:</span></label>
+        <input type="text" name="name" placeholder="书名" class="new-form-name"
+            value="{{ request.form['name'] }}">
+        </input>
+    </div>
+
+    <br>
+
+    <!-- 作者 -->
+    <div class="form-group">
+        <label for="author"> <span style="font-size: 20px;">作者:</span></label>
+        <input type="text" name="author" placeholder="作者" class="new-form-author"
+            value="{{ request.form['author'] }}">
+        </input>
+    </div>
+
+    <br>
+
+    <!-- 定价 -->
+    <div class="form-group">
+        <label for="price"> <span style="font-size: 20px;">定价:</span></label>
+        <input type="text" name="price" placeholder="定价" class="new-form-price"
+            value="{{ request.form['price'] }}">
+        </input>
+    </div>
+
+    <br>
+
+    <!-- isbn -->
+    <div class="form-group">
+        <label for="isbn"> <span style="font-size: 20px;">ISBN:</span></label>
+        <input type="text" name="isbn" placeholder="isbn" class="new-form-isbn"
+            value="{{ request.form['isbn'] }}">
+        </input>
+    </div>
+
+    <br>
+
+    <!-- 数量 -->
+    <div class="form-group">
+        <label for="num"> <span style="font-size: 20px;">数量:</span></label>
+        <input type="text" name="num" placeholder="num" class="new-form-num"
+            value="{{ request.form['num'] }}">
+        </input>
+    </div>
+
+    <br>
+
+    <!-- 描述 -->
+    <div class="form-group">
+        <label for="description"> <span style="font-size: 20px;">描述:</span></label>
+        <input type="content" name="description" placeholder="描述" class="new-form-description"
+            value="{{ request.form['description'] }}">
+        </input>
+    </div>
+
+    <br>
+
+    <!-- 提交 -->
+    <div class="form-group">
+        <button type="submit" class="btn-new"><span>提交</span></button>
+    </div>
+</form>
+
+
+{% endblock %}

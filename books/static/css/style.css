@@ -1,0 +1,87 @@
+body {
+    background-image: url('./bk2.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    margin-top: 0px;
+    margin-left: -10px;
+    margin-right: -10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.topnav a {
+    float: left;
+    color: #adadad;
+    text-align: center;
+    padding: 16px 30px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #464646;
+    color: rgb(255, 255, 255);
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 5px;
+    /* 页边距 */
+    padding: 5px 30px;
+    margin: 75px auto 20px;
+
+    width: auto;
+    max-width: 1200px;
+
+    height: auto;
+    min-height: 840px;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.alert-danger {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    animation: fadeInOut 2s ease forwards;
+    z-index: 1200;
+}
+
+.alert-danger strong {
+    font-weight: bold;
+}

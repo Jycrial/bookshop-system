@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %} 编辑 {% endblock %}
+{% block content %}
+<h1 style="text-align: center;">编辑 <span style="color: #04aa6d;"> {{ post['name'] }} </span></h1>
+
+<hr>
+<br>
+
+<form method="post">
+    <div  class="book-container">
+        <h2 class="book-title">{{ post['id'] }}.{{ post['name'] }}</h2>
+        <div class="book-author">作者: {{ post['author'] }}</p>
+        <div class="book-price">定价: <span style="color: red;">¥{{ post['price'] }}</span> </p>
+        <div class="book-isbn">ISBN: {{ post['isbn'] }}</p>
+        <div class="book-num">剩余数量: {{ post['num'] }}</p>
+        <div class="book-description">描述: {{ post['description'] }}</p>
+    </div>
+
+    <br>
+
+    <!-- 删除 -->
+    <div class="form-group">
+        <input type="hidden" name="isdelete" value="True">
+        <button type="submit" class="btn" onclick="return confirm('确定要删除吗?')"><span>删除</span></button>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2 style="color: #04aa6d;">编辑</h2>
+    
+    <!-- 书名 -->
+    <div class="form-group">
+        <label for="name"> <span style="font-size: 20px;">书名:</span></label>
+        <input type="text" name="name" placeholder="书名" class="form-name"
+            value="{{ request.form['name'] or post['name'] }}">
+        </input>
+    </div>
+
+    <br>
+
+    <!-- 作者 -->
+    <div class="form-group">
+        <label for="author"> <span style="font-size: 20px;">作者:</span></label>
+        <input type="text" name="author" placeholder="作者" class="form-author"
+            value="{{ request.form['author'] or post['author'] }}">
+        </input>
+    </div>
+
+    <br>
+
+    <!-- 定价 -->
+    <div class="form-group">
+        <label for="price"> <span style="font-size: 20px;">定价:</span></label>
+        <input type="text" name="price" placeholder="定价" class="form-price"
+            value="{{ request.form['price'] or post['price'] }}">
+        </input>
+    </div>
+
+    <br>
+
+    <!-- 描述 -->
+    <div class="form-group">
+        <label for="description"> <span style="font-size: 20px;">描述:</span></label>
+        <input type="content" name="description" placeholder="描述" class="form-description"
+            value="{{ request.form['description'] or post['description'] }}">
+        </input>
+    </div>
+
+    <br>
+
+    <!-- 提交 -->
+    <div class="form-group">
+        <button type="submit" class="btn"><span>提交</span></button>
+    </div>
+
+</form>
+
+
+{% endblock %}

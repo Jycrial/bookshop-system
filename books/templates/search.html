@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %} 查找图书 {% endblock %}
+{% block content %}
+<h1 style="text-align: center;">查找图书</span></h1>
+
+<hr>
+<br>
+
+<form method="post">
+    
+    <!-- 书名 -->
+    <div class="form-group">
+        <label for="name"> <span style="font-size: 20px;">书名:</span></label>
+        <input type="text" name="name" placeholder="书名" class="sea-form-name"
+            value="{{ request.form['name'] }}">
+        </input>
+    </div>
+
+    <br>
+
+    <!-- 提交 -->
+    <div class="form-group">
+        <button type="submit" class="btn-sea"><span>提交</span></button>
+    </div>
+</form>
+
+
+{% if book_result %}
+    <br><hr>
+    {% for post in book_result %}
+    <div  class="book-container">
+        <h2 class="book-title">
+            <a href="{{ url_for('edit', id=post['id']) }}" class="bookname">
+                {{ post['id'] }}.{{ post['name'] }}
+            </a>
+        </h2>
+        <div class="book-author">作者: {{ post['author'] }}</p>
+        <div class="book-price">定价: <span style="color: red;">¥{{ post['price'] }}</span> </p>
+        <div class="book-isbn">ISBN: {{ post['isbn'] }}</p>
+        <div class="book-num">剩余数量: {{ post['num'] }}</p>
+        <div class="book-description">描述: {{ post['description'] }}</p>
+        <div class="edit-button">
+            <a href="{{ url_for('edit', id=post['id']) }}" class="edit-button-content">
+                编辑
+            </a>
+        </div>
+    </div>
+    <br>
+    {% endfor %}
+
+{% endif %}
+
+{% endblock %}
