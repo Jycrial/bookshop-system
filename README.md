@@ -3,10 +3,10 @@
 
 
 # 运行方法
-1.安装requirement.py中的包
+1.安装requirement.py中的包;
 
-2.在本地数据库中运行books.sql脚本
+2.在本地数据库中运行books.sql脚本;
 
-3.在books/__init__.py文件中输入本地mysql的密码
+3.在books/__init__.py文件中输入本地mysql的密码;
 
-4.运行run.py即可
+4.运行run.py即可。
