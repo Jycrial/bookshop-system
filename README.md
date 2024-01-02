@@ -3,7 +3,7 @@
 
 
 # 运行方法
-1.安装requirement.py中的包;
+1.安装requirement.txt中的包;
 
 2.在本地数据库中运行books.sql脚本;
 
